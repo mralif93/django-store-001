@@ -22,3 +22,10 @@ urlpatterns = [
     path('frontend/', include('frontend.urls')),
     path('', include('backend.urls')),
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+# add at the last
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
