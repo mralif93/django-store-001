@@ -13,6 +13,7 @@ django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
 bcrypt = "*"
 load-dotenv = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
