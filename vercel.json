@@ -30,6 +30,7 @@
       "src": "/(.*)",
       "dest": "django_store_001/wsgi.py"
     }
-  ]
+  ],
+  "outputDirectory": "staticfiles"
 }
 
