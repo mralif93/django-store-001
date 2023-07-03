@@ -11,6 +11,7 @@ typing-extensions = "==4.7.0"
 django-allauth = "*"
 django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
+bcrypt = "*"
 
 [dev-packages]
 

@@ -1,0 +1,29 @@
+{% extends 'backend/master/base.html' %}
+
+{% block title %}{% endblock title %}
+{% block css %}{% endblock css %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav class="navbar navbar-expand navbar-dark bg-warning rounded-3">
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link active" href="{% url 'dashboard_view' %}" aria-current="page">Dashboard <span class="visually-hidden">(current)</span></a>
+                <a class="nav-item nav-link" href="{% url 'users_view' %}">Users</a>
+                <a class="nav-item nav-link" href="#">Purchase</a>
+            </div>
+        </nav>
+    </div>
+    <div class="col-12 mt-3">
+        <h4 class="card-title fw-bold text-uppercase">Dashboard</h4>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}{% endblock js %}

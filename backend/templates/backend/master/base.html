@@ -27,15 +27,27 @@
 </head>
 
 <body>
-  {% include 'membership/master/header.html' %}
+  {% include 'backend/master/header.html' %}
 
-  <main class="container">
-    <div class="mt-5">
-      {% block content %}{% endblock %}
-    </div>
+  <main class="container mt-4">
+    {% if messages %}
+      {% for message in messages %}
+        {% if message.tags == 'error' %}
+          <div class="alert alert-danger">
+            <strong class="text-uppercase">{{ message.tags }}!</strong> {{ message }}
+          </div>
+        {% else %}
+          <div class="alert alert-{{ message.tags }}">
+            <strong class="text-uppercase">{{ message.tags }}!</strong> {{ message }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% block content %}{% endblock %}
   </main>
 
-  {% include 'membership/master/footer.html' %}
+  {% include 'backend/master/footer.html' %}
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
